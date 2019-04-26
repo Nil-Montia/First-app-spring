@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Date;
 
 @Entity
 public class Task {
@@ -13,15 +14,13 @@ public class Task {
     private int bloc_idbloc;
     private int user_iduser;
     private String description;
-    private String information;
-    private String due_date;
+    private Date due_date;
 
-    public Task(Long id, int bloc_idbloc, int user_iduser, String description, String information, String due_date) {
+    public Task(Long id, int bloc_idbloc, int user_iduser, String description, Date due_date) {
         this.id = id;
         this.bloc_idbloc = bloc_idbloc;
         this.user_iduser = user_iduser;
         this.description = description;
-        this.information = information;
         this.due_date = due_date;
     }
 
@@ -65,19 +64,11 @@ public class Task {
         this.description = description;
     }
 
-    public String getInformation() {
-        return information;
-    }
-
-    public void setInformation(String information) {
-        this.information = information;
-    }
-
-    public String getDue_date() {
+    public Date getDue_date() {
         return due_date;
     }
 
-    public void setDue_date(String due_date) {
+    public void setDue_date(Date due_date) {
         this.due_date = due_date;
     }
 

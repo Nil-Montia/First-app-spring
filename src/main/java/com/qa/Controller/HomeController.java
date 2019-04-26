@@ -6,11 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController {
-    @Value("${greetingMessage}")
-    private String greetingMessage;
 
     @RequestMapping("/")
     public String home(){
-        return greetingMessage;
+        return "Hello everyone";
     }
 }
