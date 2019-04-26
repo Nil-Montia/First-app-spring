@@ -4,22 +4,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity
-public class Note {
 
+@Entity
+
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
     private String name;
-    private String description;
+    private String author;
 
-    public Note(Long id, String name, String description) {
-        Id = id;
-        this.name = name;
-        this.description = description;
+    public Book() {
     }
 
-    public Note(){
+    public Book(Long id, String name, String author) {
+        this.Id=id;
+        this.name = name;
+        this.author = author;
     }
 
     public Long getId() {
@@ -38,11 +39,11 @@ public class Note {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 }

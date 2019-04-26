@@ -52,6 +52,7 @@ public class NotesStub {
     }
 
     public static Note update (Long id, Note note){
+        note.setId(id);
         notes.put(id, note);
         return note;
     }
