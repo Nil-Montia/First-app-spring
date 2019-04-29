@@ -6,6 +6,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/task/")
 public class TaskController {
@@ -26,11 +28,17 @@ public class TaskController {
         taskRepository.saveAndFlush(task);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
     public Task retrieve(@PathVariable Long id) {
-        return taskRepository.findOne(id);
+        return taskRepository.findById(id);
     }
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+
+    @RequestMapping(value = "getAll", method = RequestMethod.GET)
+    public List<Task> retrieve() {
+        return taskRepository.findAll();
+    }
+
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         taskRepository.delete(id);
     }
