@@ -16,12 +16,30 @@ public class Task {
     private String description;
     private Date due_date;
 
+    public int getStatus() {
+        return Status;
+    }
+
+    public void setStatus(int status) {
+        Status = status;
+    }
+
+    private int Status;
+
     public Task(Long id, int bloc_idbloc, int user_iduser, String description, Date due_date) {
         this.id = id;
         this.bloc_idbloc = bloc_idbloc;
         this.user_iduser = user_iduser;
         this.description = description;
         this.due_date = due_date;
+    }
+
+    public Task(Long id, int bloc_idbloc, int user_iduser, String description, Date due_date, int status) {
+        this.bloc_idbloc = bloc_idbloc;
+        this.user_iduser = user_iduser;
+        this.description = description;
+        this.due_date = due_date;
+        Status = status;
     }
 
     public Task(Long id, int bloc_idbloc, int user_iduser) {
