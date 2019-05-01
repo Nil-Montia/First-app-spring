@@ -11,42 +11,12 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int bloc_idbloc;
-    private int user_iduser;
+    private Long blockid;
+    private Long userid;
     private String description;
     private Date due_date;
-
-    public int getStatus() {
-        return Status;
-    }
-
-    public void setStatus(int status) {
-        Status = status;
-    }
-
     private int Status;
 
-    public Task(Long id, int bloc_idbloc, int user_iduser, String description, Date due_date) {
-        this.id = id;
-        this.bloc_idbloc = bloc_idbloc;
-        this.user_iduser = user_iduser;
-        this.description = description;
-        this.due_date = due_date;
-    }
-
-    public Task(Long id, int bloc_idbloc, int user_iduser, String description, Date due_date, int status) {
-        this.bloc_idbloc = bloc_idbloc;
-        this.user_iduser = user_iduser;
-        this.description = description;
-        this.due_date = due_date;
-        Status = status;
-    }
-
-    public Task(Long id, int bloc_idbloc, int user_iduser) {
-        this.id = id;
-        this.bloc_idbloc = bloc_idbloc;
-        this.user_iduser = user_iduser;
-    }
 
     public Task(){};
 
@@ -58,20 +28,20 @@ public class Task {
         this.id = id;
     }
 
-    public int getBloc_idbloc() {
-        return bloc_idbloc;
+    public Long getBlockid() {
+        return blockid;
     }
 
-    public void setBloc_idbloc(int bloc_idbloc) {
-        this.bloc_idbloc = bloc_idbloc;
+    public void setBlockid(Long blockid) {
+        this.blockid = blockid;
     }
 
-    public int getUser_iduser() {
-        return user_iduser;
+    public Long getUserid() {
+        return userid;
     }
 
-    public void setUser_iduser(int user_iduser) {
-        this.user_iduser = user_iduser;
+    public void setUserid(Long userid) {
+        this.userid = userid;
     }
 
     public String getDescription() {
@@ -90,5 +60,11 @@ public class Task {
         this.due_date = due_date;
     }
 
+    public int getStatus() {
+        return Status;
+    }
 
+    public void setStatus(int status) {
+        Status = status;
+    }
 }
