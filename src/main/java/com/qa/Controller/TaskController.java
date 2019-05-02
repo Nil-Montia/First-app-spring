@@ -30,7 +30,8 @@ public class TaskController {
 
     @RequestMapping(value = "get/{userid}", method = RequestMethod.GET)
     public List<Task> retrieveByUserid(@PathVariable Long userid) {
-        return taskRepository.findByUserid(userid);}
+        return taskRepository.findByUserid(userid);
+    }
 
     @RequestMapping(value = "getAll", method = RequestMethod.GET)
     public List<Task> retrieve() {

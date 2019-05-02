@@ -15,8 +15,14 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
-    public void create(@RequestBody User user) {
-        userRepository.saveAndFlush(user);
+    public String create(@RequestBody User user) {
+        if (userRepository.findAllByUsername(user.getUsername()).isEmpty()){
+            userRepository.saveAndFlush(user);
+            return "Successful";
+        }
+        else{
+            return "Unsuccessful";
+        }
     }
 
     @RequestMapping(value = "update/{id}", method = RequestMethod.POST)
