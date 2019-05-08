@@ -43,5 +43,10 @@ public class TaskController {
         taskRepository.delete(id);
     }
 
+    @RequestMapping(value = "block/{blockid}", method = RequestMethod.GET)
+    public List<Task> retrieveByBlockid(@PathVariable Long blockid) {
+        return taskRepository.findAllByBlockid(blockid);
+    }
+
 
 }

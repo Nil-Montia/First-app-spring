@@ -15,13 +15,13 @@ public class UserController {
     private UserRepository userRepository;
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
-    public String create(@RequestBody User user) {
+    public int create(@RequestBody User user) {
         if (userRepository.findAllByUsername(user.getUsername()).isEmpty()){
             userRepository.saveAndFlush(user);
-            return "Successful";
+            return 1;
         }
         else{
-            return "Unsuccessful";
+            return 0;
         }
     }
 

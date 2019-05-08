@@ -10,4 +10,5 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
     List<Task> findByUserid(Long id);
     @Override
     List<Task> findAll();
+    List<Task> findAllByBlockid(Long userid);
 }
