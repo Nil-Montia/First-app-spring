@@ -10,14 +10,21 @@ public class Block {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long blockid;
-
     private Long userid;
     private String title;
-    private String subtitle;
 
     public Long getBlockid() {
         return blockid;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
 
     public Long getUserid() {
         return userid;
