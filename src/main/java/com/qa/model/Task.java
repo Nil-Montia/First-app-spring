@@ -14,8 +14,8 @@ public class Task {
     private Long blockid;
     private Long userid;
     private String description;
-    private Date due_date;
-    private int Status;
+    private Date dueDate;
+    private int status;
 
 
     public Task(){};
@@ -52,19 +52,19 @@ public class Task {
         this.description = description;
     }
 
-    public Date getDue_date() {
-        return due_date;
+    public Date getDueDate() {
+        return dueDate;
     }
 
-    public void setDue_date(Date due_date) {
-        this.due_date = due_date;
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
     }
 
     public int getStatus() {
-        return Status;
+        return status;
     }
 
     public void setStatus(int status) {
-        Status = status;
+        this.status = status;
     }
 }
