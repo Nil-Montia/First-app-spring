@@ -13,18 +13,20 @@ public class Block {
     private Long userid;
     private String title;
 
+    public Block() {
+    }
+
+    public Block(Long userid) {
+        this.userid = userid;
+    }
+
     public Long getBlockid() {
         return blockid;
     }
 
-    public String getTitle() {
-        return title;
+    public void setBlockid(Long blockid) {
+        this.blockid = blockid;
     }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
 
     public Long getUserid() {
         return userid;
@@ -34,14 +36,11 @@ public class Block {
         this.userid = userid;
     }
 
-    public Block() {
+    public String getTitle() {
+        return title;
     }
 
-    public void setBlockid(Long blockid) {
-        this.blockid = blockid;
-    }
-
-    public Block(Long userid) {
-        this.userid = userid;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

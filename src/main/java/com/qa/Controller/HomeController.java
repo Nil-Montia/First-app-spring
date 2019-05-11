@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
     @RequestMapping("/")
-    public String home(){
-        return "Hello everyone";
+    public String home() {
+        return "Hello. Please specify the information request further with " +
+                "/task/, /user/, or /block/, and the appropiate method.";
     }
 }
