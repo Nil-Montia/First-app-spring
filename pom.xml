@@ -51,9 +51,6 @@
        <plugin>
          <groupId>or.springframework.boot</groupId>
          <artifactId>spring-boot-maven-plugin</artifactId>
-         <version>
-           2.1.5.RELEASE
-         </version>
        </plugin>
       </plugins>
   </build>
